@@ -1,2 +1,2 @@
 # odin_recipes
-HTML project
+Adelina implements HTML knowledge project.
