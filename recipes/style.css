@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,9 +8,13 @@
 
 :root {
     --peach: rgba(255, 197, 89, 0.555);
-    --white: rgb(248, 238, 224);
+    --white: rgb(255, 247, 235);
     --intenseGray: rgba(0, 0, 0, 0.2);
     --lightGray: rgba(0, 0, 0, 0.19);
+    --rose: rgba(223, 116, 116, 0.089);
+    --intenseRed: rgb(165, 39, 39);
+    --intenseGreen: rgb(50, 83, 19);
+    --intenseBrown: rgb(90, 22, 22);
     box-sizing: border-box;
 }
 
@@ -18,7 +24,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-self: center;
-
 }
 
 #card {
@@ -33,6 +38,32 @@ body {
     border-radius: 55px;
     margin: 120px;
     padding: 90px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-align: justify;
+
+
+}
+
+#content, #title, #pic, #description, #preparationTime, #ingredients , #instruction, #nutrition {
+    width: 900px;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* align-content: stretch; */
+}
+
+h2{
+    color: var(--intenseBrown);
+    font-size: 1.8em;
+
+}
+
+#content  h2{
+    font-weight: bold;
+    /* font-size: 1.4em; */
 }
 
 #content {
@@ -40,19 +71,134 @@ body {
     width:  900px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: space-between;
     align-self: center;
 }
 
-#content > img {
+#content > #pic > img {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-self: center; */
     height: 500px;
     width: 900px;
     border-radius: 35px;
     /* border: 2px solid black; */
     overflow: hidden;
+
+}
+
+#title h1 {
+    font-size: 2.4em;
+    font-style: italic;
+    height: 80px;
+    /* border: 1px solid red; */
+}
+
+#description {
+    height: 100px;
+    color: var(--intenseGreen);
+    /* border: 1px solid green; */
+
+}
+
+#preparationTime {
+    height: 150px;
+    border-radius: 20px;
+    padding: 30px;
+    width: 800px;
+    align-self: center;
+    background-color: var(--rose);
+}
+
+#preparationTime h2{
+    font-size: 1.2em;
+    color: var(--intenseRed);
+}
+
+#preparationTime li{
+    padding-left: 60px;
+    font-weight: bold;
+    list-style-position: inside;
+    color: var(--intenseGreen);
+
+    /* padding: 10px; */
+
+}
+
+#preparationTime span{
+   font-weight: normal;
+}
+
+#ingredients {
+    /* border: 1px solid limegreen; */
+    height: 460px;
+    color: var(--intenseGreen);
+    list-style-position: inside;
+    border-bottom: 1px solid var(--intenseGray);
+    /* justify-content: stretch; */
+
+
+}
+/* 
+#ingredients h2{
+    margin-bottom: 20px;
+
+} */
+
+#ingredients ul{
+    padding-left: 20px;
+
+}
+
+#instruction {
+    height: 480px;
+    color: var(--intenseGreen);
+    list-style-position: inside;
+    /* justify-content: stretch; */
+    border-bottom: 1px solid var(--intenseGray);
+
+}
+
+#instruction li{
+    /* color: var(--intenseRed); */
+    /* font-weight: bold; */
+    list-style-position: inside;
+    padding-left: 10px;
+
+}
+
+#instruction li::marker{
+    color: var(--intenseRed);
+    font-weight: bold;
+    list-style-position: inside;
+    padding-left: 20px;
+
+}
+
+#nutrition {
+    /* border: 1px solid orange; */
+    height: 230px;
+    color: var(--intenseGreen);
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 0px; */
+}
+
+#nutrition p{
+    border-bottom: 1px solid var(--intenseGray);
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+
+
+}
+
+#nutrition span{
+    color: var(--intenseRed);
+    font-weight: bold;
+    list-style-position: inside;
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+
 
 }
