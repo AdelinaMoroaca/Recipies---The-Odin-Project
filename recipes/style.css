@@ -22,8 +22,6 @@ body {
     background-color: var(--peach);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-self: center; */
 }
 
 #card {
@@ -42,8 +40,6 @@ body {
     font-size: 1.5em;
     overflow: hidden;
     text-align: justify;
-
-
 }
 
 #content, #title, #pic, #description, #preparationTime, #ingredients , #instruction, #nutrition {
@@ -57,8 +53,6 @@ body {
 h2{
     color: var(--intenseBrown);
     font-size: 1.8em;
-    /* margin-bottom: 8px; */
-
 }
 
 #content  h2{
@@ -90,6 +84,8 @@ h2{
 #description {
     height: 100px;
     color: var(--intenseGreen);
+    font-style: italic;
+    font-weight: bold;
 }
 
 #preparationTime {
@@ -117,14 +113,25 @@ h2{
    font-weight: normal;
 }
 
+#preparationTime li::marker{
+    color: var(--intenseRed);
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
 #ingredients {
     height: 310px;
     color: var(--intenseGreen);
     list-style-position: inside;
-    /* border-bottom: 1px solid var(--intenseGray); */
 }
 
 #ingredients ul{
+    padding-left: 20px;
+}
+
+#ingredients li::marker{
+    color: var(--intenseRed);
+    list-style-position: inside;
     padding-left: 20px;
 }
 
@@ -134,12 +141,17 @@ h2{
     list-style-position: inside;
     border-bottom: 1px solid var(--intenseGray);
     border-top: 1px solid var(--intenseGray);
-
+    overflow: hidden; 
 }
 
 #instruction li{
     list-style-position: inside;
     padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+#instruction li:last-child{
+    margin-bottom: 0px;
 }
 
 #instruction li::marker{
@@ -152,8 +164,6 @@ h2{
 #nutrition {
     height: 280px;
     color: var(--intenseGreen);
-/* display: flex; */
-/* flex-direction: row; */
 }
 
 #nutrition .nutrition {
@@ -163,16 +173,10 @@ h2{
    align-items:flex-start;
    margin-bottom: 3px;
    margin-top: 3px;
-
+   font-weight: bold;
    border-bottom: 1px solid var(--intenseGray);
-
 }
 
-
-
-/* #nutrition div{
+.nutrition > .nutritionValue{
     color: var(--intenseRed);
-    font-weight: bold;
-    list-style-position: inside;
-    padding-left: 200px;
-} */
+}
