@@ -7,18 +7,11 @@
 
 :root {
     --peach: rgba(255, 197, 89, 0.555);
-    --intenseRed: rgb(104, 49, 49);
-
-    --black: rgba(119, 103, 103, 0.486);
-    --red: rgb(245, 0, 0);
-    --blue: rgb(4, 0, 245);
-    --orange: rgb(245, 147, 0);
-    /* --yellow: rgb(252, 255, 57); */
+    --intenseBrown: rgb(104, 49, 49);
+    --intenseRed: rgb(184, 45, 45);
+    --white: rgb(253, 253, 253);
     box-sizing: border-box;
-
-
 }
-
 
 body {
     display: flex;
@@ -39,16 +32,6 @@ body {
     margin: 300px;
 }
 
-
-h1{
-    font-size: 7rem;
-    color: var(--intenseRed);
-
-    /* width: 40px; */
-}
-
-/*CHILD AND SIBLING COMBINATORS*/
-/* all childs of main  */
 main div {
     display: flex;
     flex-direction: column;
@@ -57,9 +40,8 @@ main div {
 
 }
 
-/* This rule will only select divs with a class of child */
 main > div {
-    border :3px solid var(--intenseRed);
+    border :3px solid var(--intenseBrown);
     margin: 10px;
     padding: 10px;
     border-radius: 45px;
@@ -67,45 +49,58 @@ main > div {
     height: 200px;
 }
 
-.parent {
+h1{
+    font-size: 7rem;
+    color: var(--intenseBrown);
+}
+
+h1:hover{
+    color:var(--intenseRed);
+}
+
+.recipe{
     position: relative;
     text-align: center;
-    color: black;
-  }
-
-
-
-.firstRecipe {
-    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4531443.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
-    opacity: 0.4;
     width: 1100px;
     height: 200px;
-    border-radius: 45px;
 }
 
-.secondRecipe {
-    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1217931.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
-    opacity: 0.4;
-    width: 1100px;
-    height: 200px;
-    border-radius: 45px;
-}
-
-.thirdRecipe {
-    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9186689.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
-    opacity: 0.4;
-    width: 1100px;
-    height: 200px;
-    border-radius: 45px;
-
-}
-
-
-
-.re {
+.firstRecipe, .secondRecipe, .thirdRecipe {
     position: absolute;
-    border: 2px solid red;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+    opacity: 0.4;
+    width: inherit;
+    height: 195px;
+    border-radius: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.firstRecipe{
+    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1217931.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
+}
+
+.secondRecipe{
+    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9186689.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
+}
+
+.thirdRecipe{
+    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4531443.jpg&q=60&c=sc&poi=auto&orient=true&h=512');
+}
+
+.firstRecipe:hover, .secondRecipe:hover, .thirdRecipe:hover{
+    opacity: 1;
+}
+
+
+a{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 3rem;
+    color: var(--white);
+    /* color:var(--intenseRed); */
+    text-decoration: none;
+   
+}
