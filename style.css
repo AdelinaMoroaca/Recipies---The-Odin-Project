@@ -6,9 +6,10 @@
 }
 
 :root {
+    --black: rgb(0, 0, 0);
     --peach: rgba(255, 197, 89, 0.555);
     --intenseBrown: rgb(104, 49, 49);
-    --intenseRed: rgb(184, 45, 45);
+    --intenseRed: rgb(210, 4, 45);
     --white: rgb(253, 253, 253);
     box-sizing: border-box;
 }
@@ -37,11 +38,10 @@ main div {
     flex-direction: column;
     justify-content: center;
     border-bottom: 30px;
-
 }
 
 main > div {
-    border :3px solid var(--intenseBrown);
+    border : 3px solid var(--intenseBrown);
     margin: 10px;
     padding: 10px;
     border-radius: 45px;
@@ -70,7 +70,7 @@ h1:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.4;
+    opacity: 0.6;
     width: inherit;
     height: 195px;
     border-radius: 35px;
@@ -96,11 +96,23 @@ h1:hover{
 }
 
 
-a{
+.recipeTitle{
     font-family: "Noto Sans", sans-serif;
-    font-size: 3rem;
-    color: var(--white);
-    /* color:var(--intenseRed); */
+    font-size: 3.3rem;
     text-decoration: none;
-   
+    font-weight: bold;
+    opacity: 1;
+    color: var(--white);
+}
+
+.recipeTitle:visited {
+    color: var(--black);
+}
+  
+.recipeTitle:hover {
+    color: var(--white);
+}
+ 
+.recipeTitle:active {
+    color: var(--intenseRed);
 }
